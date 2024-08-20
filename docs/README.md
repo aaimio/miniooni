@@ -25,7 +25,7 @@ services:
     volumes:
       - ./miniooni:/config
     environment:
-      command1: web_connectivity@v0.5
+      command1: web_connectivity@v0.5 --yes
       command2: dnsping --input-file /config/dns.csv -O Domains=example.com --yes
       fail_fast: true
       sleep: true

@@ -1,6 +1,6 @@
 # miniooni for Docker
 
-Docker wrapper for OONI's miniooni, a tool designed to measure internet censorship by executing various tests.
+Docker wrapper for `miniooni`, a tool designed to measure internet censorship by executing various tests.
 
 - Contribute spare bandwidth to help measure internet censorship
 - [Things you should know before running miniooni](https://ooni.org/about/risks/)

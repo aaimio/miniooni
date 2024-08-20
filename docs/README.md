@@ -38,6 +38,8 @@ services:
 docker run \
   --name miniooni \
   -v ./miniooni:/config \
+  -e command1="web_connectivity@v0.5 --yes" \
+  -e command2="dnsping --input-file /config/dns.csv -O Domains=example.com --yes" \
   -e sleep=true \
   --restart unless-stopped \
   aaimio/miniooni:latest

@@ -41,8 +41,8 @@ while true; do
       log "\"miniooni $command\" exited with status $exit_status"
 
       if [ $fail_fast == "true" && $exit_status -ne 0 ]; then
-        log "Fail-fast is enabled. Exiting."
-        exit $exit_status
+        log "Fail-fast is enabled. Breaking out of loop..."
+        break;
       fi
     fi
   done

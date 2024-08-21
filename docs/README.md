@@ -1,6 +1,6 @@
 # miniooni for Docker
 
-Docker wrapper for `miniooni`, a tool designed to measure internet censorship by executing various tests.
+Docker wrapper for `miniooni`, a tool designed to measure internet censorship.
 
 - Contribute spare bandwidth to help measure internet censorship
 - [Things you should know before running miniooni](https://ooni.org/about/risks/)
@@ -26,8 +26,6 @@ services:
       - ./miniooni:/config
     environment:
       command1: web_connectivity@v0.5 --yes
-      command2: dnsping --input-file /config/dns.csv -O Domains=example.com --yes
-      fail_fast: true
       sleep: true
     restart: unless-stopped
 ```
@@ -39,7 +37,6 @@ docker run \
   --name miniooni \
   -v ./miniooni:/config \
   -e command1="web_connectivity@v0.5 --yes" \
-  -e command2="dnsping --input-file /config/dns.csv -O Domains=example.com --yes" \
   -e sleep=true \
   --restart unless-stopped \
   aaimio/miniooni:latest
